@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&family=Open+Sans:wght@500&family=Oswald:wght@200;600&family=Poppins:wght@600&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fdf4e6;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 800;
+  font-size: 3.2rem;
+  margin-bottom: 0.24rem;
+}
+
+li {
+  margin-top: 15px;
+}
+li::before {
+  margin-right: 10px;
+}
+
+hr {
+  border-top: 10px dotted red;
+  width: 10%;
+  margin: 20px auto;
+}
+
+ul {
+  list-style: none;
+}
+
+h3 {
+  color: #9a0606;
+}
+
+p,
+li {
+  font-family: "Open Sans", sans-serif;
+
+  font-weight: 900;
+}
+
+a {
+  color: #8d3737;
+}

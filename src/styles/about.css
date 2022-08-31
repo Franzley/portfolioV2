@@ -1,0 +1,36 @@
+.about-content {
+  text-align: justify;
+  margin: auto;
+  padding: 30px;
+  width: 700px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Bullet Points */
+.about-section li::before {
+  content: "000";
+  color: transparent;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  background: #ffffbf;
+}
+
+/* Alter formatting for different screen sizes */
+@media screen and (max-width: 875px) {
+  .about-content {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 780px) {
+  .about-content {
+    width: 380px;
+    margin-left: 18px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+      inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+      inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  }
+}

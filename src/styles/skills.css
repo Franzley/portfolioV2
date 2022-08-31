@@ -1,0 +1,80 @@
+.skills-content {
+  text-align: left;
+  margin: auto;
+  padding: 50px;
+  width: 700px;
+  margin-bottom: 25px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.skills-section ul {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+
+.skills-section li::before {
+  content: "0 0";
+  color: transparent;
+  border-radius: 50%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+    inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+}
+
+
+/* Change in bullet point colors */
+.ul-languages li::before {
+  background: #be93d8;
+}
+
+.ul-frameworks li::before {
+  background: #ffc2ff;
+}
+
+.ul-tools li::before {
+  background: #b9e4f0;
+}
+
+.ul-others li::before {
+  background: #c2ff82;
+}
+
+@media screen and (max-width: 875px) {
+  .skills-section ul {
+    grid-template-columns: 200px 200px;
+  }
+
+  .skills-content {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .skills-content {
+    width: 350px;
+    margin: auto;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+      inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+      inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .skills-section ul {
+    grid-template-columns: 140px 140px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .skills-content {
+    width: 380px;
+    margin-left: 18px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25),
+      inset 2px 2px 5px rgba(255, 255, 255, 0.25),
+      inset -3px -3px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .skills-section ul {
+    grid-template-columns: 140px 140px;
+  }
+}
