@@ -20,5 +20,6 @@ export const ProjectsArray = [
     on the keyboard or clicked on with the screen. Each button plays a unique tone when pressed.`,
     techs: `Used: HTML, CSS, Vanilla-Javascript`,
     code: "https://github.com/Franzley/Drum-Kit",
+    website: "https://franzley.github.io/Drum-Kit/"
   },
 ];
