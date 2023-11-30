@@ -1,29 +1,22 @@
-import React from "react";
-import "../../styles/footer.css";
-import { ContactsArray } from "../variables/ContactsArray";
+import React from 'react'
 
 const Footer = () => {
   return (
-    <div id="contact" className="footer">
-      <h1>Contact Me</h1>
-
-      <div className="contacts">
-        <ul>
-          {ContactsArray.map((detail, index) => {
-            return (
-              <li key={index}>
-                <i className={detail.icon}></i>
-                <strong>
-                  {detail.subtitle}
-                  <a href={detail.link}>{detail.displayedText}</a>
-                </strong>
-              </li>
-            );
-          })}
-        </ul>
+    <div className='footer'>
+      <div className='footer-top'>
+        <p>Lorem ipsum dolor sit amet</p>
+        <div className='social-media'>
+          <div>
+          <i class="fa-brands fa-linkedin"></i>
+          </div>
+          <div>
+          <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
       </div>
+      <div className='footer-bottom'><i class="fa-solid fa-envelope"></i></div>
     </div>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
