@@ -1,19 +1,16 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SectionCard from "../components/SectionCard";
-// import "../../styles/index.css";
 
 const Home = () => {
   return (
     // Main Content
     <div className="wrap-page">
-      <Navbar/>
-      <SectionCard/>
+      <Navbar />
       <div className="feed">
         Body
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

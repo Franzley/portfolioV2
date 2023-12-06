@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-top'>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Franzley Bonhomme Portfolio. Full-Stack Web Developer</p>
         <div className='social-media'>
           <div>
           <i class="fa-brands fa-linkedin"></i>
@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='footer-bottom'><i class="fa-solid fa-envelope"></i></div>
+      <div className='footer-bottom'><i class="fa-solid fa-envelope"></i> franzleybonhomme003@gmail.com</div>
     </div>
   )
 }

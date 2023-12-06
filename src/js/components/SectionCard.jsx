@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SectionCard = () => {
+const SectionCard = ({ section }) => {
   return (
-    <div className='section-card'>Projects</div>
+    <div className='section-card'>{section}</div>
   )
 }
 

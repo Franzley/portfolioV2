@@ -1,15 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SectionCard from './SectionCard'
 
 const Navbar = () => {
   return (
     <div className='my-nav'>
       <div className='my-nav-links'>
-        <Link to="#">PROJECTS</Link>
-        <Link to="#">ABOUT</Link>
-        <Link to="#">RESUME</Link>
-        <Link to="#">CONTACT</Link>
+        <Link to="#">Projects</Link>
+        <Link to="#">About</Link>
+        <Link to="#">Resume</Link>
+        <Link to="#">Contact</Link>
       </div>
+      <SectionCard section="Projects" />
     </div>
   )
 }
