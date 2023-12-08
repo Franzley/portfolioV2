@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import SectionCard from './SectionCard'
+import RectangleCard from './RectangleCard'
 
 const Navbar = () => {
   return (
@@ -11,7 +11,7 @@ const Navbar = () => {
         <Link to="#">Resume</Link>
         <Link to="#">Contact</Link>
       </div>
-      <SectionCard section="Projects" />
+      <RectangleCard text="Projects" type="section" />
     </div>
   )
 }

@@ -31,15 +31,68 @@ a {
     width: calc(var(--width));
     height: 7rem;
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: calc(50% - (var(--width)/2));
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
 }
+
+.rectangle {
+    width: 5px;
+    height: 60px;
+    background: #DC4646;
+}
+
+.section-card .rectangle {
+    margin-left: 15%;
+    margin-right: 15px;
+}
+
 
 .feed {
     background-color: #75F4FC;
-    height: 1000px;
+    /* height: 1000px; */
     color: #000000;
     padding: 2.5rem;
+    padding-top: 8rem;
+}
+
+ul {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+li {
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+li:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.project-card {
+    background-color: #ffffff;
+    color: black;
+    /* --width: rem; */
+    /* width: calc(var(--width)); */
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+    width: 50%;
+}
+
+img {
+    --size: 325px;
+    width: calc(var(--size));
+    height: calc(var(--size));
+}
+
+.project-info {
+    padding: 15px;
+    width: 68%;
 }
 
 .footer {
@@ -54,7 +107,8 @@ a {
     justify-content: space-between;
     margin-right: 15rem;
 }
-.footer-top p{
+
+.footer-top p {
     width: 14rem;
 }
 
