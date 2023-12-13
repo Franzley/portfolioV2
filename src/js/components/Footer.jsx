@@ -7,14 +7,14 @@ const Footer = () => {
         <p>Franzley Bonhomme Portfolio. Full-Stack Web Developer</p>
         <div className='social-media'>
           <div>
-          <i class="fa-brands fa-linkedin"></i>
+          <i className="fa-brands fa-linkedin"></i>
           </div>
           <div>
-          <i class="fa-brands fa-github"></i>
+          <i className="fa-brands fa-github"></i>
           </div>
         </div>
       </div>
-      <div className='footer-bottom'><i class="fa-solid fa-envelope"></i> franzleybonhomme003@gmail.com</div>
+      <div className='footer-bottom'><i className="fa-solid fa-envelope"></i> franzleybonhomme003@gmail.com</div>
     </div>
   )
 }

@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+/* NAVBAR SECTION */
 .my-nav {
     height: 200px;
     position: relative;
@@ -21,6 +22,10 @@ body {
 a {
     text-decoration: none;
     color: #EF5814;
+
+    &:hover {
+        color: #ffffff;
+    }
 }
 
 .section-card {
@@ -49,57 +54,80 @@ a {
     margin-right: 15px;
 }
 
+/* NAVBAR SECTION END */
 
+/* WEBSITE BODY */
 .feed {
     background-color: #75F4FC;
-    /* height: 1000px; */
     color: #000000;
     padding: 2.5rem;
     padding-top: 8rem;
 }
 
-ul {
-    list-style: none;
-    margin-right: 2rem;
+.tabs {
+    text-align: center;
 }
 
-li {
+.project-type-tab {
+    margin-bottom: 2.5rem;
+    font-size: 16px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid #DC4646;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+
+    &:hover {
+        background-color: #DC4646;
+    }
+}
+
+.button-background {
+    background: #DC4646;
+}
+
+.projects {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: 2.5rem;
 }
 
-li:nth-child(even) {
-    flex-direction: row-reverse;
+.project-image {
+    flex-basis: 30%;
+    border-radius: 32px;
+    box-shadow:
+        1px 1px 0 1px rgb(239, 88, 20),
+        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    transition:
+        .4s ease-in-out transform,
+        .4s ease-in-out box-shadow;
+
+    &:hover {
+        transform:
+            translate3d(0px, -32px, 0px) rotateX(2deg);
+        box-shadow:
+            1px 1px 0 1px rgb(212, 12, 192),
+            -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+            54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+    }
 }
 
-.project-card {
-    background-color: #ffffff;
-    color: black;
-    /* --width: rem; */
-    /* width: calc(var(--width)); */
-    display: flex;
-    text-transform: uppercase;
-    align-items: center;
-    width: 50%;
-}
-
-img {
-    --size: 325px;
-    width: calc(var(--size));
-    height: calc(var(--size));
-}
+/* WEBSITE BODY END */
 
 .project-info {
     padding: 15px;
     width: 68%;
 }
 
+
+/* FOOTER SECTION */
 .footer {
     color: #ffffff;
-    height: 200px;
     padding: 2.5rem;
-    position: relative;
 }
 
 .footer-top {
@@ -120,7 +148,6 @@ img {
     align-items: center;
 }
 
-.footer-bottom {
-    position: absolute;
-    bottom: 2.5rem;
-}
+.footer-bottom {}
+
+/* FOOTER SECTION END */

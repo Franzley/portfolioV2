@@ -1,32 +1,46 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ReelReviews from '../../img/ReelReviews.png'
-import MyTube from '../../img/MyTube.png'
-import RectangleCard from "../components/RectangleCard";
+import projectList from "../variables/projectList";
+import { useState } from "react";
 
 const Home = () => {
+  const [projects, setProjects] = useState(projectList);
+  const [isSelected, setIsSelected] = useState("all");
+
+  const onSelection = (projectType) => {
+    if (projectType === 'all') {
+      setProjects(projectList)
+    } else {
+      setProjects(() => {
+        return projectList.filter((item, index) => {
+          return item.type === projectType
+        })
+      })
+    }
+  }
+
+  const handleClick = (e) => {
+    onSelection(e.target.id);
+    setIsSelected(e.target.id)
+  }
+
   return (
     // Main Content
     <div className="wrap-page">
       <Navbar />
       <div className="feed">
-        <ul>
-          <li className="project">
-            <img src={ReelReviews} />
-            <div className="project-info">
-              <RectangleCard type="project" text="ReelReviews" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium ligula sed ornare aliquet. Sed nec mattis nisi. Pellentesque placerat magna nulla, id fermentum justo eleifend non. Donec ultrices sed erat sit amet condimentum. Pellentesque tellus enim, laoreet pretium molestie accumsan, viverra eu lorem. Nam viverra arcu eget risus consequat, vitae congue purus malesuada. Sed in vestibulum magna. Nam sit amet justo dapibus, euismod orci vel, vehicula magna. Suspendisse potenti. Curabitur at tellus sed orci accumsan porta vitae ac metus. Curabitur non odio efficitur, suscipit ex eu, pharetra ante.</p>
-            </div>
-          </li>
-          <li className="project">
-            <img src={MyTube} />
-            <div className="project-info">
-              <RectangleCard type="project" text="Mytube" />
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus pretium ligula sed ornare aliquet. Sed nec mattis nisi. Pellentesque placerat magna nulla, id fermentum justo eleifend non. Donec ultrices sed erat sit amet condimentum. Pellentesque tellus enim, laoreet pretium molestie accumsan, viverra eu lorem. Nam viverra arcu eget risus consequat, vitae congue purus malesuada. Sed in vestibulum magna. Nam sit amet justo dapibus, euismod orci vel, vehicula magna. Suspendisse potenti. Curabitur at tellus sed orci accumsan porta vitae ac metus. Curabitur non odio efficitur, suscipit ex eu, pharetra ante.</p>
-            </div>
-          </li>
-        </ul>
+        <div className="tabs">
+          <button className={`project-type-tab ${isSelected === "all" ? 'button-background' : ""}`} id="all" onClick={handleClick}>All</button>
+          <button className={`project-type-tab ${isSelected === "website" ? 'button-background ' : ""}`} id="website" onClick={handleClick}>Website</button>
+          <button className={`project-type-tab ${isSelected === "figma" ? 'button-background' : ""}`} id="figma" onClick={handleClick}>Figma</button>
+        </div>
+
+        <div className="projects">
+          {projects.map((project, index) => {
+            return <img className="project-image" key={index} width={350} src={project.image} alt="Project" />
+          })}
+        </div>
       </div>
       <Footer />
     </div>
