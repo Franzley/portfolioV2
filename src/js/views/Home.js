@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import projectList from "../variables/projectList";
 import { useState } from "react";
 
@@ -27,22 +25,18 @@ const Home = () => {
 
   return (
     // Main Content
-    <div className="wrap-page">
-      <Navbar />
-      <div className="feed">
-        <div className="tabs">
-          <button className={`project-type-tab ${isSelected === "all" ? 'button-background' : ""}`} id="all" onClick={handleClick}>All</button>
-          <button className={`project-type-tab ${isSelected === "website" ? 'button-background ' : ""}`} id="website" onClick={handleClick}>Website</button>
-          <button className={`project-type-tab ${isSelected === "figma" ? 'button-background' : ""}`} id="figma" onClick={handleClick}>Figma</button>
-        </div>
-
-        <div className="projects">
-          {projects.map((project, index) => {
-            return <img className="project-image" key={index} width={350} src={project.image} alt="Project" />
-          })}
-        </div>
+    <div className="feed">
+      <div className="tabs">
+        <button className={`project-type-tab ${isSelected === "all" ? 'button-background' : ""}`} id="all" onClick={handleClick}>All</button>
+        <button className={`project-type-tab ${isSelected === "website" ? 'button-background ' : ""}`} id="website" onClick={handleClick}>Website</button>
+        <button className={`project-type-tab ${isSelected === "figma" ? 'button-background' : ""}`} id="figma" onClick={handleClick}>Figma</button>
       </div>
-      <Footer />
+
+      <div className="projects">
+        {projects.map((project, index) => {
+          return <img className="project-image" key={index} width={350} src={project.image} alt="Project" />
+        })}
+      </div>
     </div>
   );
 };
