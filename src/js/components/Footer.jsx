@@ -4,13 +4,16 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-top'>
-        <p>Franzley Bonhomme Portfolio. Full-Stack Web Developer</p>
+        <div>
+          <h2>Franzley Bonhomme Portfolio</h2>
+          <h2>Full-Stack Web Developer</h2>
+        </div>
         <div className='social-media'>
           <div>
-          <i className="fa-brands fa-linkedin"></i>
+            <i className="fa-brands fa-linkedin"></i>
           </div>
           <div>
-          <i className="fa-brands fa-github"></i>
+            <i className="fa-brands fa-github"></i>
           </div>
         </div>
       </div>

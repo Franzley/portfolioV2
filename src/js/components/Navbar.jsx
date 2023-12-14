@@ -7,8 +7,10 @@ import { useState, useEffect } from 'react'
 const Navbar = () => {
   let location = useLocation();
   const [pageText, setPageText] = useState("")
+
+
   useEffect(() => {
-    setPageText(location.pathname === "/" ? "Projects" : "About Me")
+    setPageText(location.pathname === "/about" ? "About Me" : "Projects")
   }, [location.pathname])
 
   return (
@@ -17,7 +19,6 @@ const Navbar = () => {
         <Link to="/">Projects</Link>
         <Link to="/about">About</Link>
         <Link to="https://drive.google.com/file/d/1SdYWa9MrTcwCiRqlgpDDUJcANFF001Bb/view?usp=sharing">Resume</Link>
-        <Link to="">Contact</Link>
       </div>
       <RectangleCard text={pageText} type="section" />
     </div>

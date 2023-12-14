@@ -1,10 +1,12 @@
 import React from "react";
 import projectList from "../variables/projectList";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [projects, setProjects] = useState(projectList);
   const [isSelected, setIsSelected] = useState("all");
+  const navigate = useNavigate();
 
   const onSelection = (projectType) => {
     if (projectType === 'all') {
@@ -34,7 +36,7 @@ const Home = () => {
 
       <div className="projects">
         {projects.map((project, index) => {
-          return <img className="project-image" key={index} width={350} src={project.image} alt="Project" />
+          return <img onClick={() => navigate(`/projects/${project.value}`)} className="project-image" key={index} width={350} src={project.image} alt="Project" />
         })}
       </div>
     </div>

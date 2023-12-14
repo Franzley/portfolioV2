@@ -2,6 +2,7 @@ body {
     background-color: #1E1E1E;
     margin: 0;
     padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
 }
 
 /* NAVBAR SECTION */
@@ -76,9 +77,13 @@ a {
 .social-media {
     display: flex;
     flex-direction: row;
-    width: 2.5rem;
+    width: 3.5rem;
     justify-content: space-between;
     align-items: center;
+}
+
+.fa-brands{
+    font-size: 1.5rem;
 }
 
 /* FOOTER SECTION END */

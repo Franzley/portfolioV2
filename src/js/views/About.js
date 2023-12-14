@@ -8,7 +8,6 @@ const About = () => {
   return (
     // Main Content
     <div className="feed">
-      <p>My Skills</p>
       <div className="skills">
         {skills.map((item, index) => {
           if (count % 4 === 0) {
@@ -17,6 +16,7 @@ const About = () => {
           return <span key={index} className={`span-${colors[count++]}`}>{item}</span>
         })}
       </div>
+      <p>ds</p>
       <Timeline />
     </div>
   );
