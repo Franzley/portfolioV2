@@ -1,17 +1,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import RectangleCard from './RectangleCard'
+import { useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 const Navbar = () => {
+  let location = useLocation();
+  const [pageText, setPageText] = useState("")
+  useEffect(() => {
+    setPageText(location.pathname === "/" ? "Projects" : "About Me")
+  }, [location.pathname])
+
   return (
     <div className='my-nav'>
       <div className='my-nav-links'>
-        <Link to="#">Projects</Link>
-        <Link to="#">About</Link>
-        <Link to="#">Resume</Link>
-        <Link to="#">Contact</Link>
+        <Link to="/">Projects</Link>
+        <Link to="/about">About</Link>
+        <Link to="https://drive.google.com/file/d/1SdYWa9MrTcwCiRqlgpDDUJcANFF001Bb/view?usp=sharing">Resume</Link>
+        <Link to="">Contact</Link>
       </div>
-      <RectangleCard text="Projects" type="section" />
+      <RectangleCard text={pageText} type="section" />
     </div>
   )
 }
