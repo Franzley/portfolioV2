@@ -16,7 +16,6 @@ const About = () => {
           return <span key={index} className={`span-${colors[count++]}`}>{item}</span>
         })}
       </div>
-      <p>ds</p>
       <Timeline />
     </div>
   );

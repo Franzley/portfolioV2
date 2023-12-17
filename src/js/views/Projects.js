@@ -14,14 +14,14 @@ const Projects = () => {
         return item.value === project
       })
     })
-  }, [])
+  }, [project])
 
 
 
 
   return (
     <div className="feed">
-      {projectData[0] ?
+      {projectData[0] &&
         <div>
           <div className='project-header'>
             <h1 >{projectData[0].name}</h1>
@@ -30,12 +30,13 @@ const Projects = () => {
           <div className='project-description'>
             <p>{projectData[0].description}</p>
             <div className='project-links'>
+              {projectData[0].media && <iframe width="600" height="350" frameborder="0" src={projectData[0].media} />}
               {projectData[0].github && <Link to={projectData[0].github}>View on Github</Link>}
               {projectData[0].page && <Link to={projectData[0].page}>View Webpage</Link>}
             </div>
           </div>
         </div>
-        : ""}
+      }
     </div>
   )
 }
