@@ -1,17 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect, useContext } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import RectangleCard from './RectangleCard'
-import { useLocation } from 'react-router-dom'
-import { useState, useEffect } from 'react'
+import { MyContext } from './AppContext';
 
 const Navbar = () => {
   let location = useLocation();
   const [pageText, setPageText] = useState("")
+  const { text } = useContext(MyContext);
 
-
+  // When the pathname changes, assigns corresponding text to the page header
+  // listens to the pathname and context
   useEffect(() => {
-    setPageText(location.pathname === "/about" ? "About Me" : "Projects")
-  }, [location.pathname])
+    switch (location.pathname) {
+      case '/':
+        return setPageText("Projects");
+      case '/projects':
+        return setPageText("Projects");
+      case '/about':
+        return setPageText("About Me");
+      default:
+        return setPageText(text.name);
+    }
+  }, [location.pathname, text])
 
   return (
     <div className='my-nav'>

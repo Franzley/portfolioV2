@@ -1,42 +1,40 @@
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import React, { useState, useEffect } from 'react'
+import { useParams, Link } from 'react-router-dom'
 import projectList from '../variables/projectList';
-import { useEffect } from 'react'
-import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { MyContext } from '../components/AppContext';
 
 const Projects = () => {
   let { project } = useParams();
   const [projectData, setProjectData] = useState([])
+  const { setText } = useContext(MyContext);
 
+  // Filters the array to find the selected project and pulls object containing its corresponding data
   useEffect(() => {
-    setProjectData(() => {
-      return projectList.filter((item) => {
-        return item.value === project
-      })
+    const [dataVal] = projectList.filter((item) => {
+      return item.value === project
     })
-  }, [project])
-
-
+    setProjectData(dataVal)
+    setText(dataVal)
+  }, [project, projectData, setText])
 
 
   return (
     <div className="feed">
-      {projectData[0] &&
-        <div>
-          <div className='project-header'>
-            <h1 >{projectData[0].name}</h1>
-            <img width={1000} height={550} src={projectData[0].image} alt="Project" />
-          </div>
-          <div className='project-description'>
-            <p>{projectData[0].description}</p>
-            <div className='project-links'>
-              {projectData[0].media && <iframe width="600" height="350" frameborder="0" src={projectData[0].media} />}
-              {projectData[0].github && <Link to={projectData[0].github}>View on Github</Link>}
-              {projectData[0].page && <Link to={projectData[0].page}>View Webpage</Link>}
-            </div>
+      <div>
+        <div className='project-header'>
+          <img width={1000} height={550} src={projectData.image} alt="Project" />
+        </div>
+        <div className='project-description'>
+          <span>{projectData.description}</span>
+          <div className='project-links'>
+            {projectData.media && <iframe title='project' width="600" height="350" src={projectData.media} />}
+            {projectData.github && <Link to={projectData.github}>View on Github</Link>}
+            {projectData.page && <Link to={projectData.page}>View Webpage</Link>}
           </div>
         </div>
-      }
+      </div>
+
     </div>
   )
 }

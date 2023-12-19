@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import projectList from "../variables/projectList";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -8,15 +7,15 @@ const Home = () => {
   const [isSelected, setIsSelected] = useState("all");
   const navigate = useNavigate();
 
+    // When the tab changes, filter the projects displayed
   const onSelection = (projectType) => {
-    if (projectType === 'all') {
-      setProjects(projectList)
-    } else {
-      setProjects(() => {
-        return projectList.filter((item, index) => {
-          return item.type === projectType
-        })
-      })
+    switch (projectType) {
+      case 'all':
+        return setProjects(projectList);
+      default:
+        return setProjects(() => projectList.filter((item) =>
+          item.type === projectType
+        ))
     }
   }
 

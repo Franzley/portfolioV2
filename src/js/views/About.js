@@ -6,10 +6,10 @@ const About = () => {
   const colors = ['primary', 'secondary', 'danger', 'success']
   let count = 0
   return (
-    // Main Content
     <div className="feed">
       <div className="skills">
         {skills.map((item, index) => {
+          // If the array reaches the last value, reset to the start
           if (count % 4 === 0) {
             count = 0
           }
