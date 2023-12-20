@@ -10,10 +10,10 @@ const Footer = () => {
         </div>
         <div className='social-media'>
           <div>
-            <i className="fa-brands fa-linkedin"></i>
+            <a href='https://www.linkedin.com/in/franzley-bonhomme-8a1b77247/'><i className="fa-brands fa-linkedin"></i></a>
           </div>
           <div>
-            <i className="fa-brands fa-github"></i>
+            <a href='https://github.com/Franzley'><i className="fa-brands fa-github"></i></a>
           </div>
         </div>
       </div>
