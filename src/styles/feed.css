@@ -215,4 +215,8 @@
         width: 100%;
         height: auto;
     }
+
+    .my-nav-links {
+        max-width: 20rem;
+    }
 }
