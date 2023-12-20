@@ -28,3 +28,18 @@ img {
         -1px 0 28px 0 rgba(34, 33, 81, 0.01),
         28px 28px 28px 0 rgba(34, 33, 81, 0.25);
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}

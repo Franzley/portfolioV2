@@ -1,11 +1,9 @@
-/* The actual timeline (the vertical ruler) */
 .timeline {
     position: relative;
     max-width: 1200px;
     margin: 0 auto 0 auto
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
     content: '';
     position: absolute;
@@ -17,22 +15,6 @@
     margin-left: -3px;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Container around content */
 .container {
     padding: 10px 40px;
     position: relative;
@@ -53,12 +35,10 @@ li {
     z-index: 1;
 }
 
-/* Place the container to the left */
 .left {
     left: 0;
 }
 
-/* Place the container to the right */
 .right {
     left: 50%;
 }
@@ -91,12 +71,10 @@ li {
     border-color: transparent white transparent transparent;
 }
 
-/* Fix the circle for containers on the right side */
 .right::after {
     left: -16px;
 }
 
-/* The actual content */
 .content {
     padding: 20px 30px;
     background-color: white;
