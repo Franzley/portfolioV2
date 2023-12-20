@@ -35,7 +35,7 @@ const Home = () => {
 
       <div className="projects">
         {projects.map((project, index) => {
-          return <img onClick={() => navigate(`/projects/${project.value}`)} className="project-image" key={index} width={350} src={project.image} alt="Project" />
+          return <img onClick={() => navigate(`/projects/${project.value}`)} className="project-image" key={index} src={project.image} alt="Project" />
         })}
       </div>
     </div>

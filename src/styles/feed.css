@@ -1,4 +1,80 @@
-/* WEBSITE BODY */
+/* Navbar Section */
+.my-nav {
+    height: 200px;
+    position: relative;
+}
+
+.my-nav-links {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem auto 0 auto;
+    max-width: 30rem;
+    text-transform: uppercase;
+}
+
+.section-card {
+    background-color: #ffffff;
+    color: black;
+    border: 3.5px solid #EF5814;
+    width: 30rem;
+    height: 7rem;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.rectangle {
+    width: 5px;
+    height: 60px;
+    background: #DC4646;
+    margin-left: 15%;
+    margin-right: 15px;
+}
+
+/* Footer Section */
+.footer {
+    color: #ffffff;
+    padding: 2.5rem;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    /* Stack items vertically on small screens */
+    justify-content: space-between;
+    align-items: center;
+    /* Center items horizontally on small screens */
+    text-align: center;
+    /* Center text on small screens */
+}
+
+.footer-top p {
+    width: auto;
+    /* Allow paragraph width to adjust based on content */
+    margin-bottom: 1rem;
+    /* Add some space between paragraphs */
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    /* Center social media icons on small screens */
+    width: 100%;
+    /* Make sure social media icons take the full width on small screens */
+}
+
+.fa-brands {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    /* Add some space between social media icons */
+}
+
+
+/* Feed Section */
 .feed {
     background-color: #75F4FC;
     color: #000000;
@@ -15,7 +91,7 @@
     font-size: 16px;
     font-weight: 200;
     letter-spacing: 1px;
-    padding: 13px 20px 13px;
+    padding: 13px 20px;
     outline: 0;
     border: 1px solid #DC4646;
     cursor: pointer;
@@ -33,32 +109,42 @@
 
 .projects {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
     gap: 2.5rem;
 }
 
+.projects img {
+    width: 350px;
+}
+
+
+/* Project Header */
 .project-header {
     text-align: center;
     margin: auto;
 }
-.project-description {
-margin-top: 5rem;
-margin-bottom: 5rem;
+
+.project-header img {
+    width: 1000px;
+    height: 550px;
 }
-.project-links{
+
+
+/* Project Description */
+.project-description {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.project-links {
     display: flex;
     flex-direction: column;
 }
 
-img {
-    border-radius: 32px;
-    box-shadow:
-        1px 1px 0 1px rgb(239, 88, 20),
-        -1px 0 28px 0 rgba(34, 33, 81, 0.01),
-        28px 28px 28px 0 rgba(34, 33, 81, 0.25);
-}
 
 .project-image {
+    width: 520px;
+    height: 350px;
     cursor: pointer;
     flex-basis: 30%;
     transition:
@@ -75,19 +161,21 @@ img {
     }
 }
 
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-bottom: 3rem;
+}
+
 .skills span {
     box-shadow: 0 3px 0 0 #7305a6, 0 4px 4px -1px rgba(0, 0, 0, 0.6), 0 4px 6px 1px rgba(0, 0, 0, 0.3), 0 1px 2px 1px rgba(0, 0, 0, 0) inset, 0 18px 32px -2px rgba(255, 255, 255, 0.1) inset;
     padding: 0.5em 1em;
     border-radius: 0.2em;
     color: white;
     flex-basis: 10%;
-}
-
-.skills {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 0.5em;
-    margin-bottom: 3rem;
 }
 
 .span-primary {
@@ -106,10 +194,31 @@ img {
     background-image: linear-gradient(-45deg, #52C11F, #0caa49);
 }
 
+/* Project Info Section */
 .project-info {
     padding: 15px;
     width: 68%;
 }
 
 
-/* WEBSITE BODY END */
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    .projects img {
+        width: 100%;
+    }
+
+    .project-header img {
+        width: 100%;
+        height: 100%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    .projects img {
+        width: 100%;
+        height: auto;
+        /* Allow the height to adjust proportionally on small screens */
+    }
+}

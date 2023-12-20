@@ -23,12 +23,12 @@ const Projects = () => {
     <div className="feed">
       <div>
         <div className='project-header'>
-          <img width={1000} height={550} src={projectData.image} alt="Project" />
+          <img src={projectData.image} alt="Project" />
         </div>
         <div className='project-description'>
           <span>{projectData.description}</span>
           <div className='project-links'>
-            {projectData.media && <iframe title='project' width="600" height="350" src={projectData.media} />}
+            {projectData.media && <iframe title='project' src={projectData.media} />}
             {projectData.github && <Link to={projectData.github}>View on Github</Link>}
             {projectData.page && <Link to={projectData.page}>View Webpage</Link>}
           </div>

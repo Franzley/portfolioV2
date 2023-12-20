@@ -7,16 +7,47 @@ import Portfolio from '../../img/Portfolio.png'
 import ASPJokes from '../../img/ASPJokes.png'
 
 
-const reelReviewsDesc = <div>The final project during my time at 4Geeks Academy was a movie web application.
-    The aim of my team was to design a movie discovery website with watch list functionality where the user can add or delete
-    movies from their watch lists. Other features included the ability to search for movies which are fetched from an API.
-    The web application also consisted of sign up and login pages. User accounts were managed through Firebase and database with Firestore.</div>
-const youtubeEmulationDesc = ``
-const twitterEmulationDesc = ``
-const boxChampyDesc = ``
-const drumktitDesc = ``
-const portfolioDesc = ``
-const jokesDesc = ``
+const reelReviewsDesc = <span>
+    At the end of my time at 4Geeks Academy, we had the opportunity to create any web application for the final project.
+    My team opted to create a movie web application. Our team focused on creating a user-friendly movie discovery website featuring watch list functionality and
+    allowing users to easily add or remove movies from their lists. We also implemented a movie search feature powered by data fetched from an API.
+    <br />
+    <br />
+    In this project, my primary responsibility centered around the integration of the watch list feature. Through this experience, I familiarized myself with Firebase and Firestore.
+    Specifically, User account management was handled using Firebase for authentication and Firestore for database operations.
+    This experience enhanced my skills in web development, and I gained valuable insights into designing interactive and dynamic features for users.
+</span>
+
+const youtubeEmulationDesc = <span>
+    I undertook the challenge of developing a full-stack web application that mirrors the appearance and functionality of YouTube.
+    I utilized tools such as Material UI and React. The application's core functionalities consisted of video searching,
+    channel viewing, and related videos display which were implemented using the Rapid API and YouTube V3 API. This project not only enhanced my skills in front-end development but also
+    provided valuable experience in integrating third-party APIs to fetch and display dynamic content.
+</span>
+const twitterEmulationDesc = <span>
+    I undertook the challenge of developing a full-stack web application that mirrors the appearance and functionality of Twitter.
+    I utilized tools such as Material UI and React. I set up user accounts and managed messages using Google Firestore and Firebase.
+    Messages can update in real-time without making users refresh the page.
+
+</span>
+const boxChampyDesc = <span>
+    In order to widen my skillset, I learned how to use Figma for the creation and refinement of design mockups. This is a simple, yet clean design
+    of a website that could be used by a gym to showcase their features and purpose.
+</span>
+const drumktitDesc = <span>
+    Developed a website featuring interactive sound functionalities.
+    The site allows users to trigger distinct sounds corresponding to specific keys displayed on-screen.
+    Users can seamlessly interact with the application either through keyboard inputs or by directly clicking on the visualized drums.
+    The project was implemented using Vanilla JavaScript, showcasing proficiency in core programming principles and front-end development.
+</span>
+const portfolioDesc = <span>
+    Used Figma to design the current web portfolio, in order to improve my understanding of the platform.
+    By integrating Figma into the design process, I could visualize how I wanted the site to appear before implementaion but had some edits in the final work.
+</span>
+const jokesDesc = <span>
+    Engaged with ASP.NET Core to develop a web application that stores a list of jokes.
+    This project allowed to understand ASP.NET Core's capabilities and efficiency in crafting web applications.
+</span>
 
 
 
